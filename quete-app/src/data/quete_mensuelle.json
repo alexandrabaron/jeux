@@ -1,0 +1,37 @@
+{
+  "titre": "Le défi de l'attention et de la santé préventive",
+  "pitch_intro": "En tant que dirigeants, vous êtes aux avant-postes d'un changement d'époque. Nos jeunes de 18-25 ans font face à un niveau d'anxiété sans précédent et à une omniprésence numérique qui bouscule leur santé. Comprendre les véritables ressorts de leurs comportements, ce n'est pas seulement vital pour l'impact de notre Fondation, c'est aussi un atout stratégique pour manager nos jeunes talents demain. Vous avez 7 minutes pour déjouer les pièges cognitifs et collaborer !",
+  "quiz_impact": [
+    {
+      "id": 1,
+      "type": "faits",
+      "question": "D'après notre dernière étude BVA, bien que 85 % des jeunes s'estiment en bonne santé, une immense majorité cumule des pratiques à risque concernant les écrans. Quel est le pourcentage de jeunes qui avouent utiliser leur écran pendant les repas, un moment pourtant clé pour la satiété et le lien social ?",
+      "options": [
+        "A. 35 %",
+        "B. 52 %",
+        "C. 73 %"
+      ],
+      "bonne_reponse": "C. 73 %",
+      "explication": "73 % regardent des écrans pendant les repas, et de surcroît 61 % n'éteignent pas leur smartphone au moins 1h avant de dormir. Un décalage massif entre la santé perçue et l'hygiène de vie réelle."
+    },
+    {
+      "id": 2,
+      "type": "decision",
+      "question": "Vous êtes en charge de lancer une campagne SMS pour inciter les jeunes (ou leurs parents) à effectuer un vaccin de prévention (ex: Papillomavirus). Quel est le moyen le plus efficace pour *doubler* le taux d'engagement selon les sciences comportementales ?",
+      "options": [
+        "A. Envoyer un message détaillant les graves conséquences médicales (peur).",
+        "B. Envoyer un message indiquant que la dose est 'spécialement réservée' pour eux à la clinique.",
+        "C. Proposer une récompense financière à chaque vaccin effectué."
+      ],
+      "bonne_reponse": "B. Envoyer un message indiquant que la dose est 'spécialement réservée' pour eux à la clinique.",
+      "explication": "C'est l'aversion à la perte et l'effet de dotation (expérimentation menée en Géorgie). Le sentiment de posséder déjà la dose pousse à ne pas vouloir la perdre, surmontant l'inertie habituelle."
+    },
+    {
+      "id": 3,
+      "type": "appel_expert",
+      "question": "Joker Expert : Nous remarquons que les jeunes continuent de vapoter ou de sauter des repas malgré une information très claire. Cher binôme Expert, comment expliquez-vous par la psychologie cognitive ce 'fossé' entre l'intention et l'action, et que devrions-nous changer dans nos discours traditionnels ?",
+      "consigne_binome": "Directeur, cliquez sur 'Envoyer à mon binôme pour avis'. L'Expert aura 60 secondes pour dicter ou taper son retour sur le biais de 'préférence pour le présent' et le 'Système 1 vs Système 2'."
+    }
+  ],
+  "takeaway_dirigeant": "TAKEAWAY BUSINESS : L'Architecture des choix. En entreprise comme en santé publique, la pédagogie a ses limites. Pour favoriser des comportements sains ou productifs chez vos collaborateurs, modifiez l'environnement par défaut (le 'Nudge'). Exemple : configurez l'arrêt automatique des notifications serveurs après 19h plutôt que de faire une énième charte sur le droit à la déconnexion."
+}

@@ -1,0 +1,3 @@
+# Exclure les dossiers de données et d'images spécifiques
+/data/
+/pictures_april/
