@@ -1,0 +1,25 @@
+{
+  "theme": "Santé des Jeunes et Ethnographie Digitale",
+  "source": "Rapport Ethnographique",
+  "matching_game": [
+    {
+      "term": "Digital Native",
+      "definition": "Génération ayant grandi avec le numérique."
+    }
+  ],
+  "true_false_game": [
+    {
+      "statement": "Les jeunes s'informent principalement via les réseaux sociaux pour leur santé.",
+      "is_true": true,
+      "explanation": "Les réseaux sociaux sont devenus la première source d'information santé pour les 18-25 ans."
+    }
+  ],
+  "decision_game": {
+    "scenario": "Un jeune cherche des conseils sur la nutrition. Où va-t-il regarder en premier ?",
+    "options": [
+      "Le site officiel du gouvernement.",
+      "Une vidéo TikTok ou Instagram."
+    ],
+    "expert_insight": "Les formats courts et visuels sont privilégiés par cette génération."
+  }
+}

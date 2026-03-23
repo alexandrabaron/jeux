@@ -1,0 +1,61 @@
+{
+  "theme": "Rapport à la Santé et Système de Soins (18-25 ans)",
+  "source": "Santé des jeunes : Rapport d'étude qualitative - BVA X Fondation APRIL (2024)",
+  "matching_game": [
+    {
+      "term": "Santé mentale",
+      "definition": "Le sujet prioritaire et décomplexé, pivot du bien-être général pour cette génération."
+    },
+    {
+      "term": "Wait and see",
+      "definition": "Stratégie consistant à attendre que la douleur soit insupportable avant de consulter[cite: 17, 34]."
+    },
+    {
+      "term": "Renoncement",
+      "definition": "Abandon des soins principalement lié aux restes à charge financiers et aux délais d'attente."
+    },
+    {
+      "term": "Parcours du combattant",
+      "definition": "Perception du système de santé jugé opaque, administratif et complexe à naviguer."
+    },
+    {
+      "term": "Médecin de famille",
+      "definition": "Figure de rassurance absolue et pilier de confiance dans un système illisible[cite: 44, 45]."
+    }
+  ],
+  "true_false_game": [
+    {
+      "statement": "Les jeunes de 18-25 ans associent spontanément la santé à l'absence de maladie physique.",
+      "is_true": false,
+      "explanation": "Ils ont une vision holistique : la santé est d'abord mentale et sociale avant d'être physique[cite: 7, 8]."
+    },
+    {
+      "statement": "Le coût des soins est le premier frein au recours aux spécialistes (dentiste, opticien).",
+      "is_true": true,
+      "explanation": "Le reste à charge financier est perçu comme prohibitif, entraînant des arbitrages budgétaires."
+    },
+    {
+      "statement": "Les réseaux sociaux (TikTok, Instagram) remplacent totalement la figure du médecin.",
+      "is_true": false,
+      "explanation": "Ils servent à l'auto-diagnostic rapide, mais le médecin reste la seule source jugée 100% fiable[cite: 41, 45]."
+    },
+    {
+      "statement": "Le passage à l'autonomie santé (gérer sa carte Vitale, Ameli) est une source de stress.",
+      "is_true": true,
+      "explanation": "Les démarches administratives sont vécues comme une corvée complexe sans mode d'emploi[cite: 46, 48]."
+    },
+    {
+      "statement": "Les jeunes sont très satisfaits de la médecine scolaire et universitaire.",
+      "is_true": false,
+      "explanation": "Elle est jugée saturée, peu accessible et limitée à des contrôles de routine peu utiles[cite: 58, 60]."
+    }
+  ],
+  "decision_game": {
+    "scenario": "Un jeune alternant de votre équipe souffre de stress chronique mais n'ose pas consulter par peur du coût. Quelle action de la Fondation serait la plus pertinente ?",
+    "options": [
+      "Lui envoyer une liste de numéros d'urgence et de plateformes de téléconsultation anonymes[cite: 41, 56].",
+      "Proposer un guide simplifié sur le remboursement des soins et le fonctionnement de la mutuelle[cite: 50, 68]."
+    ],
+    "expert_insight": "L'illettrisme administratif et le coût sont les blocages majeurs. Expliquer concrètement 'comment c'est remboursé' lève le premier frein au soin[cite: 51, 68]."
+  }
+}

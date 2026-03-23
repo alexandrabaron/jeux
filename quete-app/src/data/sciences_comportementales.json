@@ -1,0 +1,61 @@
+{
+  "theme": "Sciences Comportementales et Prévention Santé",
+  "source": "Livre Blanc - Sciences Comportementales et Santé : Regards croisés au cœur du changement",
+  "matching_game": [
+    {
+      "term": "Système 1",
+      "definition": "Mode de pensée intuitif, rapide et automatique basé sur les réflexes."
+    },
+    {
+      "term": "Nudge",
+      "definition": "Incitant doux qui modifie l'environnement pour encourager un comportement sans contraindre."
+    },
+    {
+      "term": "Affordance",
+      "definition": "Capacité d'un objet ou d'un design à suggérer sa propre utilisation de manière instinctive."
+    },
+    {
+      "term": "Biais d'ancrage",
+      "definition": "Tendance à se fier excessivement à la première information reçue pour prendre une décision."
+    },
+    {
+      "term": "Littératie en santé",
+      "definition": "Capacité d'un individu à trouver, comprendre et utiliser l'information pour sa santé."
+    }
+  ],
+  "true_false_game": [
+    {
+      "statement": "La santé d'un individu dépend à 80% de son capital génétique.",
+      "is_true": false,
+      "explanation": "C'est l'inverse : la santé tient à 20% de la génétique et à 80% de l'épigénétique (environnement et modes de vie)."
+    },
+    {
+      "statement": "Le slogan 'Manger 5 fruits et légumes par jour' est efficace pour 85% des Français.",
+      "is_true": false,
+      "explanation": "Ce message ne parle en réalité qu'à 15% de la population ; les experts préconisent de personnaliser davantage la prévention."
+    },
+    {
+      "statement": "L'exposition aux campagnes de santé publique peut parfois réduire l'intention d'agir chez les publics précaires.",
+      "is_true": true,
+      "explanation": "C'est l'effet contre-productif : mettre en avant des bénéfices futurs peut paraître inaudible pour ceux qui vivent dans l'insécurité immédiate."
+    },
+    {
+      "statement": "La mauvaise observance des traitements coûte environ 15 milliards d'euros par an en France.",
+      "is_true": true,
+      "explanation": "Ce gaspillage colossal est dû aux séjours hospitaliers évitables et au mauvais usage des médicaments."
+    },
+    {
+      "statement": "Le design actif en entreprise permet de lutter contre la sédentarité.",
+      "is_true": true,
+      "explanation": "Aménager les bureaux pour favoriser le mouvement est une recommandation clé pour transformer les habitudes de travail."
+    }
+  ],
+  "decision_game": {
+    "scenario": "Vous souhaitez encourager vos collaborateurs à utiliser l'escalier plutôt que l'ascenseur pour leur santé physique. Quelle approche privilégiez-vous selon les sciences comportementales ?",
+    "options": [
+      "Afficher une note de service rappelant les risques cardiovasculaires liés à la sédentarité.",
+      "Repeindre l'escalier avec des couleurs vives et un design ludique ('Nudge')."
+    ],
+    "expert_insight": "L'escalier repeint crée une expérience positive immédiate et facilite le passage à l'action réflexe (Système 1), là où l'injonction médicale peut être perçue comme culpabilisante et rester sans effet durable."
+  }
+}
