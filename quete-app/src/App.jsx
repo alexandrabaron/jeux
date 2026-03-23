@@ -11,7 +11,7 @@ import logoSrc from './assets/logo.png';
 function App() {
   const [step, setStep] = useState('hub'); // 'hub', 'mode1', 'mode2', 'mode3', 'score', 'leaderboard'
   const [selectedQuest, setSelectedQuest] = useState(null);
-  
+
   // Timer state
   const TOTAL_TIME = 7 * 60; // 7 minutes
   const [timeLeft, setTimeLeft] = useState(TOTAL_TIME);
@@ -46,14 +46,14 @@ function App() {
   };
 
   const renderHeader = () => (
-    <header className="flex justify-between items-center mb-8 pb-4" style={{borderBottom: '2px solid var(--color-border)'}}>
+    <header className="flex justify-between items-center mb-8 pb-4" style={{ borderBottom: '2px solid var(--color-border)' }}>
       <div className="flex items-center gap-4">
         <img src={logoSrc} alt="Fondation APRIL" style={{ height: '40px', objectFit: 'contain' }} />
-        <h1 style={{fontSize: '1.25rem', color: 'var(--color-dark)'}}>Fondation APRIL</h1>
+        <h1 style={{ fontSize: '1.25rem', color: 'var(--color-dark)' }}>Fondation APRIL</h1>
       </div>
-      
+
       {step !== 'hub' && step !== 'score' && step !== 'leaderboard' && (
-        <div className={`flex items-center gap-2 px-4 py-2 rounded-lg font-bold ${timeLeft < 60 ? 'animate-pulse' : ''}`} style={{backgroundColor: timeLeft < 60 ? '#fee2e2' : '#f1f5f9', color: timeLeft < 60 ? '#ef4444' : 'var(--color-text-muted)', transition: 'all 0.3s'}}>
+        <div className={`flex items-center gap-2 px-4 py-2 rounded-lg font-bold ${timeLeft < 60 ? 'animate-pulse' : ''}`} style={{ backgroundColor: timeLeft < 60 ? '#fee2e2' : '#f1f5f9', color: timeLeft < 60 ? '#ef4444' : 'var(--color-text-muted)', transition: 'all 0.3s' }}>
           <Clock size={20} />
           {formatTime(timeLeft)}
         </div>
@@ -66,35 +66,35 @@ function App() {
       {renderHeader()}
       <main className="w-full h-full flex items-center justify-center flex-col">
         {step === 'hub' && (
-          <HubSelection 
-            onSelectTheme={startQuestFlow} 
+          <HubSelection
+            onSelectTheme={startQuestFlow}
             onViewLeaderboard={() => setStep('leaderboard')}
           />
         )}
-        
+
         {step === 'mode1' && selectedQuest && (
-          <MatchingGame 
-            data={selectedQuest.matching_game} 
-            onComplete={() => setStep('mode2')} 
+          <MatchingGame
+            data={selectedQuest.matching_game}
+            onComplete={() => setStep('mode2')}
           />
         )}
-        
+
         {step === 'mode2' && selectedQuest && (
-          <TrueFalseGame 
-            data={selectedQuest.true_false_game} 
-            onComplete={() => setStep('mode3')} 
+          <TrueFalseGame
+            data={selectedQuest.true_false_game}
+            onComplete={() => setStep('mode3')}
           />
         )}
 
         {step === 'mode3' && selectedQuest && (
-           <DecisionDilemma 
-             data={selectedQuest.decision_game} 
-             onComplete={() => endQuest()} 
-           />
+          <DecisionDilemma
+            data={selectedQuest.decision_game}
+            onComplete={() => endQuest()}
+          />
         )}
 
         {step === 'score' && selectedQuest && (
-          <ScoreBoard 
+          <ScoreBoard
             theme={selectedQuest.theme}
             timeLeft={timeLeft}
             formatTime={formatTime}
@@ -103,7 +103,7 @@ function App() {
         )}
 
         {step === 'leaderboard' && (
-          <Leaderboard 
+          <Leaderboard
             playerScore={300}
             onRestart={() => window.location.reload()}
           />
