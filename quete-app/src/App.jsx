@@ -6,6 +6,7 @@ import TrueFalseGame from './components/TrueFalseGame';
 import DecisionDilemma from './components/DecisionDilemma';
 import ScoreBoard from './components/ScoreBoard';
 import Leaderboard from './components/Leaderboard';
+import logoSrc from './assets/logo.png';
 
 function App() {
   const [step, setStep] = useState('hub'); // 'hub', 'mode1', 'mode2', 'mode3', 'score', 'leaderboard'
@@ -47,7 +48,7 @@ function App() {
   const renderHeader = () => (
     <header className="flex justify-between items-center mb-8 pb-4" style={{borderBottom: '2px solid var(--color-border)'}}>
       <div className="flex items-center gap-4">
-        <img src={`${import.meta.env.BASE_URL}logo.png`} alt="Fondation APRIL" style={{ height: '40px', objectFit: 'contain' }} />
+        <img src={logoSrc} alt="Fondation APRIL" style={{ height: '40px', objectFit: 'contain' }} />
         <h1 style={{fontSize: '1.25rem', color: 'var(--color-dark)'}}>Fondation APRIL</h1>
       </div>
       
