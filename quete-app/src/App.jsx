@@ -47,7 +47,7 @@ function App() {
   const renderHeader = () => (
     <header className="flex justify-between items-center mb-8 pb-4" style={{borderBottom: '2px solid var(--color-border)'}}>
       <div className="flex items-center gap-4">
-        <img src="/logo.png" alt="Fondation APRIL" style={{ height: '40px', objectFit: 'contain' }} />
+        <img src={`${import.meta.env.BASE_URL}logo.png`} alt="Fondation APRIL" style={{ height: '40px', objectFit: 'contain' }} />
         <h1 style={{fontSize: '1.25rem', color: 'var(--color-dark)'}}>Fondation APRIL</h1>
       </div>
       
