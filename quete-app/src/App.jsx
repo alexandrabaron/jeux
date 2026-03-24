@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Clock } from 'lucide-react';
+import { Clock, Home } from 'lucide-react';
 import HubSelection from './components/HubSelection';
 import MatchingGame from './components/MatchingGame';
 import TrueFalseGame from './components/TrueFalseGame';
@@ -48,8 +48,17 @@ function App() {
   const renderHeader = () => (
     <header className="flex justify-between items-center mb-8 pb-4" style={{ borderBottom: '2px solid var(--color-border)' }}>
       <div className="flex items-center gap-4">
-        <img src={logoSrc} alt="Fondation APRIL" style={{ height: '40px', objectFit: 'contain' }} />
-        <h1 style={{ fontSize: '1.25rem', color: 'var(--color-dark)' }}>Fondation APRIL</h1>
+        <div style={{width: 40, height: 40, backgroundColor: 'var(--color-orange)', borderRadius: 8, display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'white', fontWeight: 'bold'}}>FA</div>
+        <h1 style={{fontSize: '1.25rem', color: 'var(--color-dark)'}}>Fondation APRIL</h1>
+        {step !== 'hub' && (
+          <button 
+            onClick={() => { setStep('hub'); setSelectedQuest(null); setIsTimerRunning(false); }}
+            className="btn-outline ml-4 flex items-center gap-2 p-2"
+            title="Retour à l'accueil"
+          >
+            <Home size={20} />
+          </button>
+        )}
       </div>
 
       {step !== 'hub' && step !== 'score' && step !== 'leaderboard' && (
