@@ -1,25 +1,61 @@
 {
   "theme": "Santé des Jeunes et Ethnographie Digitale",
-  "source": "Rapport Ethnographique",
+  "source": "Santé des jeunes : les 18-25 ans sous l'œil de l'ethnographie digitale (2024)",
   "matching_game": [
     {
-      "term": "Digital Native",
-      "definition": "Génération ayant grandi avec le numérique."
+      "term": "Optimisme comparatif",
+      "definition": "Tendance des jeunes à se croire moins exposés aux risques que la moyenne de leur génération. [cite: 14]"
+    },
+    {
+      "term": "Coping digital",
+      "definition": "Utilisation des réseaux sociaux pour réguler ses émotions ou trouver du soutien face au stress. [cite: 19]"
+    },
+    {
+      "term": "Normalisation",
+      "definition": "Processus où des comportements à risque (ex: manque de sommeil) deviennent un standard social acceptable. [cite: 17]"
+    },
+    {
+      "term": "Auto-diagnostic",
+      "definition": "Utilisation de contenus digitaux pour identifier seul un trouble, souvent de santé mentale. [cite: 20]"
+    },
+    {
+      "term": "Injonction de positivité",
+      "definition": "Pression sociale sur les réseaux poussant à ne montrer que les aspects réussis de sa vie. [cite: 22]"
     }
   ],
   "true_false_game": [
     {
-      "statement": "Les jeunes s'informent principalement via les réseaux sociaux pour leur santé.",
+      "statement": "Les jeunes considèrent le manque de sommeil comme une fatalité liée à leur rythme de vie plutôt que comme un problème de santé. [cite: 16]",
       "is_true": true,
-      "explanation": "Les réseaux sociaux sont devenus la première source d'information santé pour les 18-25 ans."
+      "explanation": "Le sommeil est perçu comme une variable d'ajustement face aux études, au travail et à la vie sociale. [cite: 16]"
+    },
+    {
+      "statement": "La majorité des 18-25 ans consultent un médecin dès l'apparition des premiers symptômes. ",
+      "is_true": false,
+      "explanation": "Ils pratiquent massivement le 'wait and see' ou l'automédication via Google avant de solliciter un professionnel. "
+    },
+    {
+      "statement": "Les réseaux sociaux sont la première source d'information santé pour les jeunes, devant les professionnels. [cite: 20]",
+      "is_true": true,
+      "explanation": "TikTok et Instagram servent de portes d'entrée pour s'informer, notamment sur la santé mentale et l'alimentation. [cite: 20, 24]"
+    },
+    {
+      "statement": "L'alcool est perçu par les jeunes comme un outil de désinhibition nécessaire à la sociabilisation. [cite: 14]",
+      "is_true": true,
+      "explanation": "La consommation est souvent vue comme un 'lubrifiant social' pour intégrer un groupe ou célébrer un événement. [cite: 14]"
+    },
+    {
+      "statement": "Les jeunes de 18-25 ans ont une vision très précise et structurée du système de soins français. [cite: 29]",
+      "is_true": false,
+      "explanation": "Le système est jugé complexe, opaque et difficile d'accès, entraînant souvent un renoncement aux soins. [cite: 29, 30]"
     }
   ],
   "decision_game": {
-    "scenario": "Un jeune cherche des conseils sur la nutrition. Où va-t-il regarder en premier ?",
+    "scenario": "Une étude montre que vos jeunes collaborateurs ne dorment que 6h par nuit et sont épuisés. Quelle stratégie de prévention est la plus efficace selon l'étude ? [cite: 16, 42]",
     "options": [
-      "Le site officiel du gouvernement.",
-      "Une vidéo TikTok ou Instagram."
+      "Distribuer une brochure scientifique sur les cycles du sommeil et les risques de l'apnée du sommeil. [cite: 42]",
+      "Communiquer sur le sommeil comme un levier de performance immédiate et de bien-être quotidien. [cite: 42]"
     ],
-    "expert_insight": "Les formats courts et visuels sont privilégiés par cette génération."
+    "expert_insight": "Les jeunes sont peu sensibles aux risques à long terme. Il faut valoriser les bénéfices immédiats (énergie, humeur, concentration) pour rendre la prévention attractive. [cite: 42]"
   }
 }
