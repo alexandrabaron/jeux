@@ -42,11 +42,11 @@ export default function NewsView() {
       {/* Feed */}
       <div className="flex-col gap-8">
         {newsItems.map(item => (
-          <div key={item.id} className="card p-0 overflow-hidden shadow-md">
+          <div key={item.id} className="card p-0 overflow-hidden" style={{ padding: 0 }}>
             {/* Post Header */}
-            <div className="p-4 flex items-center gap-3">
-              <div className="w-10 h-10 rounded-full bg-slate-200 flex items-center justify-center font-bold text-white" style={{ backgroundColor: 'var(--color-azur)' }}>
-                FA
+            <div className="flex items-center gap-3 p-4">
+              <div style={{ width: '40px', height: '40px', display: 'flex', alignItems: 'center', justifyContent: 'center', border: '1px solid var(--color-border)', borderRadius: '8px', backgroundColor: 'var(--color-surface)' }}>
+                <img src="/logo.png" alt="Logo Fondation APRIL" style={{ width: '100%', height: '100%', objectFit: 'contain', padding: '4px' }} />
               </div>
               <div>
                 <h3 className="font-bold text-sm" style={{ color: 'var(--color-dark)' }}>{item.author}</h3>

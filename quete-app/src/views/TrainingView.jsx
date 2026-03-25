@@ -32,57 +32,61 @@ export default function TrainingView() {
         </select>
       </div>
 
-      <div className="flex gap-6 mt-6 flex-wrap md:flex-nowrap">
+      <div className="flex gap-6 mt-6 flex-wrap md:flex-nowrap" style={{ flexWrap: 'wrap' }}>
         {/* Synthèse Documentaire */}
-        <div className="w-full md:w-1/2 card" style={{ backgroundColor: '#fafafa' }}>
+        <div className="card" style={{ backgroundColor: '#fafafa', flex: '1 1 100%' }}>
           <h3 className="font-bold flex items-center gap-2 mb-4" style={{ color: 'var(--color-dark)' }}>
             <FileText size={20} color="var(--color-azur)" /> Extraits de l'étude
           </h3>
-          <div className="flex-col gap-4 max-h-[400px] overflow-y-auto pr-2">
+          <div className="flex-col gap-4" style={{ maxHeight: '400px', overflowY: 'auto', paddingRight: '0.5rem' }}>
              {selectedTheme.true_false_game.map((item, idx) => (
-               <div key={idx} className="p-3 bg-white border border-slate-200 rounded text-sm mb-3 shadow-sm" style={{ borderLeft: '3px solid var(--color-orange)' }}>
-                 <strong>Constat :</strong> {item.explanation}
+               <div key={idx} style={{ padding: '1rem', backgroundColor: 'white', border: '1px solid var(--color-border)', borderRadius: '4px', marginBottom: '1rem', borderLeft: '4px solid var(--color-orange)' }}>
+                 <strong>Constat :</strong> {item.explanation.replace(/\[cite:[^\]]*\]/g, '')}
                </div>
              ))}
              {selectedTheme.decision_game?.expert_insight && (
-               <div className="p-3 bg-blue-50 border border-blue-200 rounded text-sm text-blue-900 shadow-sm mt-4">
-                 <strong>Insight Expert :</strong> {selectedTheme.decision_game.expert_insight}
+               <div style={{ padding: '1rem', backgroundColor: '#eff6ff', border: '1px solid #bfdbfe', borderRadius: '4px', color: '#1e3a8a', marginTop: '1rem' }}>
+                 <strong>Insight Expert :</strong> {selectedTheme.decision_game.expert_insight.replace(/\[cite:[^\]]*\]/g, '')}
                </div>
              )}
           </div>
         </div>
 
         {/* Validation Livrable */}
-        <div className="w-full md:w-1/2 card flex-col justify-between">
+        <div className="card flex-col justify-between" style={{ flex: '1 1 100%' }}>
           <div>
             <h3 className="font-bold flex items-center gap-2 mb-2" style={{ color: 'var(--color-dark)' }}>
               Validation du Livrable Cellule
             </h3>
-            <p className="text-sm text-slate-500 mb-6">La validation de cette synthèse par les 3 membres du groupe générera la recommandation officielle.</p>
+            <p style={{ fontSize: '0.85rem', color: 'var(--color-text-muted)', marginBottom: '1.5rem' }}>La validation de cette synthèse par les 3 membres du groupe générera la recommandation officielle.</p>
             
-            <div className="flex-col gap-4">
+            <div className="flex-col" style={{ gap: '1rem' }}>
+              
               <div className="flex items-center gap-3">
-                <div className={`w-6 h-6 rounded-full flex items-center justify-center text-white text-xs ${progress >= 1 ? 'bg-green-500' : 'bg-slate-300'}`}>
+                <div style={{ width: '24px', height: '24px', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'white', fontSize: '0.75rem', fontWeight: 'bold', backgroundColor: progress >= 1 ? '#22c55e' : '#cbd5e1' }}>
                   {progress >= 1 ? <CheckCircle size={14} /> : '1'}
                 </div>
-                <span className={progress >= 1 ? 'text-slate-800' : 'text-slate-400'}>Lecture de la synthèse BVA</span>
+                <span style={{ color: progress >= 1 ? 'var(--color-dark)' : 'var(--color-text-muted)' }}>Lecture de la synthèse BVA</span>
               </div>
+
               <div className="flex items-center gap-3">
-                <div className={`w-6 h-6 rounded-full flex items-center justify-center text-white text-xs ${progress >= 2 ? 'bg-green-500' : 'bg-slate-300'}`}>
+                <div style={{ width: '24px', height: '24px', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'white', fontSize: '0.75rem', fontWeight: 'bold', backgroundColor: progress >= 2 ? '#22c55e' : '#cbd5e1' }}>
                   {progress >= 2 ? <CheckCircle size={14} /> : '2'}
                 </div>
-                <span className={progress >= 2 ? 'text-slate-800' : 'text-slate-400'}>Lien avec les actions de la Fondation</span>
+                <span style={{ color: progress >= 2 ? 'var(--color-dark)' : 'var(--color-text-muted)' }}>Lien avec les actions de la Fondation</span>
               </div>
+
               <div className="flex items-center gap-3">
-                <div className={`w-6 h-6 rounded-full flex items-center justify-center text-white text-xs ${progress >= 3 ? 'bg-green-500' : 'bg-slate-300'}`}>
+                <div style={{ width: '24px', height: '24px', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'white', fontSize: '0.75rem', fontWeight: 'bold', backgroundColor: progress >= 3 ? '#22c55e' : '#cbd5e1' }}>
                   {progress >= 3 ? <CheckCircle size={14} /> : '3'}
                 </div>
-                <span className={progress >= 3 ? 'text-slate-800 font-bold' : 'text-slate-400'}>Approbation de la recommandation stratégique</span>
+                <span style={{ color: progress >= 3 ? 'var(--color-dark)' : 'var(--color-text-muted)', fontWeight: progress >= 3 ? 'bold' : 'normal' }}>Approbation de la reco stratégique</span>
               </div>
+
             </div>
           </div>
 
-          <div className="mt-8 text-center bg-slate-50 p-4 border rounded-lg">
+          <div style={{ marginTop: '2rem', textAlign: 'center', backgroundColor: '#f8fafc', padding: '1rem', border: '1px solid var(--color-border)', borderRadius: '8px' }}>
              {progress < 3 ? (
                <button className="btn-primary w-full" onClick={handleValidate}>
                  Valider l'Étape {progress + 1}

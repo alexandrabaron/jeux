@@ -33,17 +33,26 @@ export default function TeamView() {
             <Users size={18} color="var(--color-azur)" /> Votre Cellule d'Impact
           </h4>
           <ul className="text-sm flex flex-col gap-3" style={{ color: 'var(--color-text-muted)' }}>
-            <li className="flex items-center gap-2">
-              <span className="w-2 h-2 rounded-full" style={{ backgroundColor: '#22c55e' }}></span>
-              <strong>Vous</strong> (Directrice BU)
+            <li className="flex items-start gap-3">
+              <span style={{ minWidth: '8px', height: '8px', borderRadius: '50%', backgroundColor: '#22c55e', marginTop: '6px' }}></span>
+              <div className="flex flex-col">
+                <strong style={{ color: 'var(--color-dark)' }}>Vous</strong>
+                <span style={{ fontSize: '0.85rem', color: 'var(--color-text-muted)' }}>(Directrice BU)</span>
+              </div>
             </li>
-            <li className="flex items-center gap-2">
-              <span className="w-2 h-2 rounded-full" style={{ backgroundColor: '#22c55e' }}></span>
-              <strong>Noémie Thévenot</strong> (DRH Pôle Assurance de Personnes)
+            <li className="flex items-start gap-3">
+              <span style={{ minWidth: '8px', height: '8px', borderRadius: '50%', backgroundColor: '#22c55e', marginTop: '6px' }}></span>
+              <div className="flex flex-col">
+                <strong style={{ color: 'var(--color-dark)' }}>Noémie Thévenot</strong>
+                <span style={{ fontSize: '0.85rem', color: 'var(--color-text-muted)' }}>(DRH Pôle Assurance de Personnes)</span>
+              </div>
             </li>
-            <li className="flex items-center gap-2">
-              <span className="w-2 h-2 rounded-full" style={{ backgroundColor: '#22c55e' }}></span>
-              <strong>Serge Guérin</strong> (Expert CA)
+            <li className="flex items-start gap-3">
+              <span style={{ minWidth: '8px', height: '8px', borderRadius: '50%', backgroundColor: '#22c55e', marginTop: '6px' }}></span>
+              <div className="flex flex-col">
+                <strong style={{ color: 'var(--color-dark)' }}>Serge Guérin</strong>
+                <span style={{ fontSize: '0.85rem', color: 'var(--color-text-muted)' }}>(Expert CA)</span>
+              </div>
             </li>
           </ul>
         </div>
