@@ -39,7 +39,7 @@ export default function TeamView() {
             </li>
             <li className="flex items-center gap-2">
               <span className="w-2 h-2 rounded-full" style={{ backgroundColor: '#22c55e' }}></span>
-              <strong>Jean Dupond</strong> (Directeur BU Santé)
+              <strong>Noémie Thévenot</strong> (DRH Pôle Assurance de Personnes)
             </li>
             <li className="flex items-center gap-2">
               <span className="w-2 h-2 rounded-full" style={{ backgroundColor: '#22c55e' }}></span>
