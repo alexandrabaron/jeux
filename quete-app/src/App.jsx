@@ -1,124 +1,42 @@
-import React, { useState, useEffect } from 'react';
-import { Clock, Home } from 'lucide-react';
-import HubSelection from './components/HubSelection';
-import MatchingGame from './components/MatchingGame';
-import TrueFalseGame from './components/TrueFalseGame';
-import DecisionDilemma from './components/DecisionDilemma';
-import ScoreBoard from './components/ScoreBoard';
-import Leaderboard from './components/Leaderboard';
-import logoSrc from './assets/logo.png';
+import React, { useState } from 'react';
+import { Home } from 'lucide-react';
+import logoUrl from './assets/logo.png';
+import Navigation from './components/Navigation';
+import TeamView from './views/TeamView';
+import TrainingView from './views/TrainingView';
+import GameLabView from './views/GameLabView';
+import NewsView from './views/NewsView';
 
 function App() {
-  const [step, setStep] = useState('hub'); // 'hub', 'mode1', 'mode2', 'mode3', 'score', 'leaderboard'
-  const [selectedQuest, setSelectedQuest] = useState(null);
-
-  // Timer state
-  const TOTAL_TIME = 7 * 60; // 7 minutes
-  const [timeLeft, setTimeLeft] = useState(TOTAL_TIME);
-  const [isTimerRunning, setIsTimerRunning] = useState(false);
-
-  useEffect(() => {
-    let interval;
-    if (isTimerRunning && timeLeft > 0) {
-      interval = setInterval(() => setTimeLeft((prev) => prev - 1), 1000);
-    } else if (timeLeft === 0 && step !== 'score' && step !== 'hub' && step !== 'leaderboard') {
-      endQuest(); // Timer expired
-    }
-    return () => clearInterval(interval);
-  }, [isTimerRunning, timeLeft, step]);
-
-  const startQuestFlow = (questData) => {
-    setSelectedQuest(questData);
-    setTimeLeft(TOTAL_TIME); // Reset timer just in case
-    setIsTimerRunning(true);
-    setStep('mode1');
-  };
-
-  const endQuest = () => {
-    setIsTimerRunning(false);
-    setStep('score');
-  };
-
-  const formatTime = (seconds) => {
-    const m = Math.floor(seconds / 60).toString().padStart(2, '0');
-    const s = (seconds % 60).toString().padStart(2, '0');
-    return `${m}:${s}`;
-  };
-
+  const [activeTab, setActiveTab] = useState('team'); // 'team', 'training', 'lab', 'news'
+  
   const renderHeader = () => (
-    <header className="flex justify-between items-center mb-8 pb-4" style={{ borderBottom: '2px solid var(--color-border)' }}>
+    <header className="flex justify-between items-center mb-6 pb-4" style={{borderBottom: '2px solid var(--color-border)'}}>
       <div className="flex items-center gap-4">
-        <div style={{width: 40, height: 40, backgroundColor: 'var(--color-orange)', borderRadius: 8, display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'white', fontWeight: 'bold'}}>FA</div>
-        <h1 style={{fontSize: '1.25rem', color: 'var(--color-dark)'}}>Fondation APRIL</h1>
-        {step !== 'hub' && (
-          <button 
-            onClick={() => { setStep('hub'); setSelectedQuest(null); setIsTimerRunning(false); }}
-            className="btn-outline ml-4 flex items-center gap-2 p-2"
-            title="Retour à l'accueil"
-          >
-            <Home size={20} />
-          </button>
-        )}
-      </div>
-
-      {step !== 'hub' && step !== 'score' && step !== 'leaderboard' && (
-        <div className={`flex items-center gap-2 px-4 py-2 rounded-lg font-bold ${timeLeft < 60 ? 'animate-pulse' : ''}`} style={{ backgroundColor: timeLeft < 60 ? '#fee2e2' : '#f1f5f9', color: timeLeft < 60 ? '#ef4444' : 'var(--color-text-muted)', transition: 'all 0.3s' }}>
-          <Clock size={20} />
-          {formatTime(timeLeft)}
+        <img src={logoUrl} alt="Logo Fondation APRIL" style={{ height: '40px', objectFit: 'contain' }} />
+        <div>
+          <h1 style={{fontSize: '1.25rem', color: 'var(--color-dark)', margin: 0}}>Fondation APRIL</h1>
+          <p style={{fontSize: '0.8rem', color: 'var(--color-orange)', margin: 0, fontWeight: 'bold'}}>Tableau de bord : Cellule d'Impact</p>
         </div>
-      )}
+      </div>
     </header>
   );
 
   return (
-    <>
+    <div className="w-full flex-col h-full min-h-screen">
       {renderHeader()}
-      <main className="w-full h-full flex items-center justify-center flex-col">
-        {step === 'hub' && (
-          <HubSelection
-            onSelectTheme={startQuestFlow}
-            onViewLeaderboard={() => setStep('leaderboard')}
-          />
-        )}
-
-        {step === 'mode1' && selectedQuest && (
-          <MatchingGame
-            data={selectedQuest.matching_game}
-            onComplete={() => setStep('mode2')}
-          />
-        )}
-
-        {step === 'mode2' && selectedQuest && (
-          <TrueFalseGame
-            data={selectedQuest.true_false_game}
-            onComplete={() => setStep('mode3')}
-          />
-        )}
-
-        {step === 'mode3' && selectedQuest && (
-          <DecisionDilemma
-            data={selectedQuest.decision_game}
-            onComplete={() => endQuest()}
-          />
-        )}
-
-        {step === 'score' && selectedQuest && (
-          <ScoreBoard
-            theme={selectedQuest.theme}
-            timeLeft={timeLeft}
-            formatTime={formatTime}
-            onViewLeaderboard={() => setStep('leaderboard')}
-          />
-        )}
-
-        {step === 'leaderboard' && (
-          <Leaderboard
-            playerScore={300}
-            onRestart={() => window.location.reload()}
-          />
-        )}
+      
+      <main className="w-full flex-1 flex flex-col items-center">
+        <Navigation activeTab={activeTab} onTabSelect={setActiveTab} />
+        
+        <div className="w-full max-w-5xl mt-4 px-2">
+          {activeTab === 'team' && <TeamView />}
+          {activeTab === 'training' && <TrainingView />}
+          {activeTab === 'lab' && <GameLabView />}
+          {activeTab === 'news' && <NewsView />}
+        </div>
       </main>
-    </>
+    </div>
   );
 }
 
