@@ -7,6 +7,7 @@ export default function NewsView() {
       id: 1,
       author: "Fondation APRIL",
       role: "Action Terrain",
+      avatar: "/logo.png",
       time: "Il y a 2h",
       content: "Déploiement de notre kiosque santé #PrendsEnMain sur le campus universitaire de Lyon. Plus de 300 étudiants sensibilisés à la santé mentale et au sommeil aujourd'hui !",
       image: "https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&q=80&w=800",
@@ -17,6 +18,7 @@ export default function NewsView() {
       id: 2,
       author: "Comité Scientifique",
       role: "Laboratoire d'idées",
+      avatar: "/serge.jpg",
       time: "Hier",
       content: "Retour sur l'expérimentation Nudge à l'hôpital de Valence. Les SMS personnalisés ont doublé le taux de vaccination HPV chez les jeunes de moins de 25 ans. Un pas de géant pour la prévention !",
       image: "https://images.unsplash.com/photo-1584982751601-97d8cb0f66fc?auto=format&fit=crop&q=80&w=800",
@@ -45,8 +47,8 @@ export default function NewsView() {
           <div key={item.id} className="card p-0 overflow-hidden" style={{ padding: 0 }}>
             {/* Post Header */}
             <div className="flex items-center gap-3 p-4">
-              <div style={{ width: '40px', height: '40px', display: 'flex', alignItems: 'center', justifyContent: 'center', border: '1px solid var(--color-border)', borderRadius: '8px', backgroundColor: 'var(--color-surface)' }}>
-                <img src="/logo.png" alt="Logo Fondation APRIL" style={{ width: '100%', height: '100%', objectFit: 'contain', padding: '4px' }} />
+              <div style={{ width: '40px', height: '40px', display: 'flex', alignItems: 'center', justifyContent: 'center', border: '1px solid var(--color-border)', borderRadius: '8px', backgroundColor: 'var(--color-surface)', overflow: 'hidden' }}>
+                <img src={item.avatar} alt={`Avatar ${item.author}`} style={{ width: '100%', height: '100%', objectFit: item.avatar === '/logo.png' ? 'contain' : 'cover', padding: item.avatar === '/logo.png' ? '4px' : '0' }} />
               </div>
               <div>
                 <h3 className="font-bold text-sm" style={{ color: 'var(--color-dark)' }}>{item.author}</h3>
