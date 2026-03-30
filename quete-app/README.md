@@ -150,3 +150,19 @@ Si vous souhaitez offrir un lien public, l'application est configurée pour le d
    ```
 
 Cette simple commande créera le dossier de production (optimisé et rapide `dist/`) et l'ajoutera sur la branche `gh-pages` de votre dépôt public ! Votre nouvelle version sera en ligne sous quelques minutes.
+
+### 📱 Générer un QR Code pour partager l'Application
+Une fois votre application en ligne (par exemple sur `https://votre-compte.github.io/jeux/`), vous pouvez la diffuser facilement aux membres via un QR Code (à placer sur une présentation, une carte, une affiche).
+
+**Comment créer votre QR Code ?**
+1. **Option rapide (Google Chrome / Edge) :**
+   - Ouvrez l'URL de votre application déployée dans votre navigateur.
+   - Cliquez sur l'icône **"Partager cette page"** (généralement à droite de la barre d'adresse) ou faites un clic droit n'importe où sur la page.
+   - Sélectionnez **"Créer un code QR pour cette page"**.
+   - Cliquez sur **Télécharger**. Vous obtenez une image prête à l'emploi.
+
+2. **Option esthétique et personnalisée (Recommandé) :**
+   - Copiez l'URL de votre application en ligne.
+   - Rendez-vous sur un générateur web gratuit comme [QRCode Monkey](https://www.qrcode-monkey.com/fr/).
+   - Collez l'URL dans le champ correspondant.
+   - **L'avantage** : Vous pouvez modifier les couleurs pour utiliser le Bleu ou le Orange APRIL (`#f6aa37`), et même **ajouter le logo de la Fondation APRIL au centre du QR Code** avant de le télécharger en haute qualité.
